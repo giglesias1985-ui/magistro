@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MAGISTRO</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#fdf6f0;--surface:#ffffff;--surface2:#fdf0e6;
+  --border:rgba(140,60,10,0.12);--border2:rgba(140,60,10,0.22);
+  --text:#2d1206;--text2:#7a4020;--text3:#b8845a;--accent:#c44a12;
+  --blue-bg:#e6f1fb;--blue-text:#185fa5;
+  --radius:8px;--radius-lg:12px;
+}
+html,body{height:100%}
+body{
+  font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--text);
+  min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px;
+}
+.wrap{width:100%;max-width:480px;text-align:center}
+.logo-name{font-size:15px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text)}
+.logo-sub{font-size:12px;color:var(--text3);margin-top:2px;margin-bottom:40px}
+.options{display:flex;flex-direction:column;gap:14px}
+.option-card{
+  display:flex;align-items:center;gap:16px;text-align:left;text-decoration:none;
+  background:var(--surface);border:1px solid var(--border2);border-radius:var(--radius-lg);
+  padding:20px;transition:border-color .12s, transform .12s;color:inherit;
+}
+.option-card:hover{border-color:var(--accent);transform:translateY(-1px)}
+.option-icon{
+  width:44px;height:44px;border-radius:10px;flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;
+}
+.option-icon.docente{background:var(--surface2);color:var(--accent)}
+.option-icon.estudiante{background:var(--blue-bg);color:var(--blue-text)}
+.option-title{font-size:15px;font-weight:700;color:var(--text);margin-bottom:2px}
+.option-sub{font-size:12.5px;color:var(--text3)}
+.option-arrow{margin-left:auto;color:var(--text3);flex-shrink:0}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="logo-name">Magistro</div>
+  <div class="logo-sub">Gestión docente y portal de estudiantes</div>
+
+  <div class="options">
+    <a class="option-card" href="docente.html">
+      <div class="option-icon docente">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+      </div>
+      <div>
+        <div class="option-title">Portal Docente</div>
+        <div class="option-sub">Gestioná tus materias, comisiones, notas y asistencia</div>
+      </div>
+      <svg class="option-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+    </a>
+
+    <a class="option-card" href="portal-estudiante.html">
+      <div class="option-icon estudiante">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      </div>
+      <div>
+        <div class="option-title">Portal Estudiante</div>
+        <div class="option-sub">Consultá tu cronograma, notas y asistencia con tu DNI</div>
+      </div>
+      <svg class="option-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+    </a>
+  </div>
+</div>
+</body>
+</html>
